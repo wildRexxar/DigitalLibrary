@@ -18,6 +18,18 @@ public class Book {
         this.year = year;
     }
 
+    public Book(Long id, String title, String author, Integer year, Long personalId) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.year = year;
+        this.personalId = personalId;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public Long getId() {
         return id;
     }

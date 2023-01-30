@@ -1,18 +1,31 @@
 package org.example.models;
 
+import java.util.List;
 import java.util.Objects;
 
 public class Person {
     private Long id;
     private String fullName;
     private Integer yearOfBird;
+    private List<Book> bookList;
 
     public Person() {
     }
 
+
     public Person(String fullName, Integer yearOfBird) {
         this.fullName = fullName;
         this.yearOfBird = yearOfBird;
+    }
+
+    public Person(Long id, String fullName, Integer yearOfBird) {
+        this.id = id;
+        this.fullName = fullName;
+        this.yearOfBird = yearOfBird;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Long getId() {
@@ -25,6 +38,14 @@ public class Person {
 
     public void setFullName(String fullName) {
         this.fullName = fullName;
+    }
+
+    public List<Book> getBookList() {
+        return bookList;
+    }
+
+    public void setBookList(List<Book> bookList) {
+        this.bookList = bookList;
     }
 
     public Integer getYearOfBird() {
