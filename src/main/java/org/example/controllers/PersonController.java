@@ -37,5 +37,11 @@ public class PersonController {
         return "/people";
     }
 
+    @GetMapping
+    public String showAllPersons(Model model){
+        model.addAttribute("people", personDAO.showAllPersons());
+        return "/allPersons";
+    }
+
 
 }
